@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Yyn-QD-pbk">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="T47-Jl-EJm">
+            <objects>
+                <windowController id="Yyn-QD-pbk" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="lCX-GE-rXT">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="Yyn-QD-pbk" id="5tm-vA-7UL"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="gLW-w0-iYi" kind="relationship" relationship="window.shadowedContentViewController" id="6Me-Oh-xxW"/>
+                    </connections>
+                </windowController>
+                <customObject id="eiy-N8-Cjj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3ye-eI-DMh">
+            <objects>
+                <viewController id="gLW-w0-iYi" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="upT-fU-Q7p">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzD-Tx-sH0">
+                                <rect key="frame" x="50" y="140" width="185" height="80"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ySo-dz-oOY"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2je-ln-Isi">
+                                <rect key="frame" x="245" y="50" width="185" height="80"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="KHe-E9-LFp"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2je-ln-Isi" secondAttribute="bottom" constant="50" id="9ar-yp-Hkf"/>
+                            <constraint firstItem="2je-ln-Isi" firstAttribute="height" secondItem="hzD-Tx-sH0" secondAttribute="height" id="FmO-nL-9LP"/>
+                            <constraint firstItem="hzD-Tx-sH0" firstAttribute="leading" secondItem="upT-fU-Q7p" secondAttribute="leading" constant="50" id="M8u-Ba-sQW"/>
+                            <constraint firstItem="hzD-Tx-sH0" firstAttribute="top" secondItem="upT-fU-Q7p" secondAttribute="top" constant="50" id="MZE-Eu-2JI"/>
+                            <constraint firstAttribute="trailing" secondItem="2je-ln-Isi" secondAttribute="trailing" constant="50" id="Zar-bw-pck"/>
+                            <constraint firstItem="2je-ln-Isi" firstAttribute="leading" secondItem="hzD-Tx-sH0" secondAttribute="trailing" constant="10" id="aUL-5o-xQ4"/>
+                            <constraint firstItem="2je-ln-Isi" firstAttribute="width" secondItem="hzD-Tx-sH0" secondAttribute="width" id="lNA-6s-lMX"/>
+                            <constraint firstItem="2je-ln-Isi" firstAttribute="top" secondItem="hzD-Tx-sH0" secondAttribute="bottom" constant="10" id="qRX-e4-I8B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filteredImage" destination="hzD-Tx-sH0" id="eur-we-zec"/>
+                        <outlet property="originalImage" destination="2je-ln-Isi" id="LNJ-Co-7Qr"/>
+                    </connections>
+                </viewController>
+                <customObject id="fH8-gY-CxJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="119"/>
+        </scene>
+    </scenes>
+</document>
